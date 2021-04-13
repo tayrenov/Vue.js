@@ -1,52 +1,12 @@
-<DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue</title>
+  </head>
+  <body>
+    <div id="app"></div>
 
-    <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <title>L1 Vue.js</title>
-            <link rel="stylesheet" href="css/main.css">
-        </head>
-
-        <body>
-            <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
-            <div id="app">
-                <span @click="changeText()">Кнопка</span>
-                <p>{{title}}</p>
-                <p v-bind:class="styleCSS">Цвет: {{styleCSS}}</p>
-                <input type="text" v-on:input="styleCSS = $event.target.value">
-            </div>
-
-            <div id="app-2">
-                <ol>
-                  <li v-for="todo in todos">
-                    {{ todo.text }}
-                  </li>
-                </ol>
-            </div>
-
-            <div id="app-3">
-                <input type="text" v-on:input="increment ($event.target.value)">
-                <p>{{ value }}</p>
-                <p>{{ doubleValue }}</p>
-            </div>
-
-            <div id="app-4">
-                <button v-on:click="show = !show">Скрыть / Показать</button>
-                <p v-if="show">Текст, который может стать невидимым</p>
-                <p v-else>Текст 2</p>
-                <!--v-show  меняет display -->
-            </div>
-
-            <div id="app-5">
-                <p>{{ hello | lovercase}}</p>
-                <ul>
-                    <li v-for="(car, i) in cars">{{i + 1}} {{ car.model }}, скорость {{car.speed}}</li>
-                </ul>
-            </div>
-
-            <script src="js/main.js"></script> 
-
-        </body>
-
-    </html>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
